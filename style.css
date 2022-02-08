@@ -38,7 +38,8 @@ input[type=checkbox] {
 }
 
 .result-container {
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.4);
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -62,6 +63,11 @@ input[type=checkbox] {
 	right: 5px;
 	height: 40px;
 	width: 40px;
+}
+
+.result-container .btn:active {
+    outline: green auto 5px;
+    background-color:green;
 }
 
 .btn {
@@ -90,31 +96,3 @@ input[type=checkbox] {
 		font-size: 14px;
 	}
 }
-
-.flash-message {
-    position: fixed;
-    bottom: var(--space-md);
-    left: var(--space-md);
-    z-index: var(--z-index-fixed-element, 10);
-    background-color: var(--color-bg-light);
-    padding: var(--space-xs);
-    box-shadow: var(--inner-glow), var(--shadow-sm);
-    border-radius: var(--radius-md);
-    color: var(--color-contrast-high);
-    font-size: var(--text-sm);
-    transition: 0.2s;
-    -webkit-transform: translateY(16px);
-            transform: translateY(16px);
-    -webkit-transform-origin: bottom left;
-            transform-origin: bottom left;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .flash-message--is-visible {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
