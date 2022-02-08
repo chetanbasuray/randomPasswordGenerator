@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f9e5bc;
+	color: #000000;
+	display: flex;
+	font-family: 'Muli', sans-serif;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	min-height: 100vh;
+}
+
+p {
+	margin: 5px 0;
+}
+
+h2 {
+	margin: 10px 0 20px;
+	text-align: center;
+}
+
+input[type=checkbox] {
+	margin-right: 0;
+}
+
+.container {
+	background-color: #d1bea8;
+	box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+	padding: 20px;
+	width: 350px;
+	max-width: 100%;
+}
+
+.result-container {
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 12px 10px;
+	height: 50px;
+	width: 100%;
+}
+
+.result-container #result {
+  	word-wrap: break-word;
+	max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.btn {
+	border: none;
+	color: #000000;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 8px 12px;
+	background-color: #f9e5bc;
+}
+
+.btn-large {
+	display: block;
+	width: 100%;
+}
+
+.setting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+	.result-container {
+		font-size: 14px;
+	}
+}
+
+.flash-message {
+    position: fixed;
+    bottom: var(--space-md);
+    left: var(--space-md);
+    z-index: var(--z-index-fixed-element, 10);
+    background-color: var(--color-bg-light);
+    padding: var(--space-xs);
+    box-shadow: var(--inner-glow), var(--shadow-sm);
+    border-radius: var(--radius-md);
+    color: var(--color-contrast-high);
+    font-size: var(--text-sm);
+    transition: 0.2s;
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .flash-message--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
